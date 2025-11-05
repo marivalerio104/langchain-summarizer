@@ -21,12 +21,11 @@ with st.form("form"):
 
   summarize = st.form_submit_button("Summarize!")
 
-
 if summarize:
   if text.strip():
     with st.spinner("Summarizing..."):
-      summary = summarize_text(text)
+      summary = summarize_text(text, option)
       st.subheader("Summary:")
-      # st.write(summary)
+      st.write(summary)
   else:
     st.warning("Please enter some text first.")
