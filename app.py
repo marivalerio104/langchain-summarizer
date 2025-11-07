@@ -1,6 +1,27 @@
 import streamlit as st
 from summarizer import summarize_text
 
+
+st.markdown("""
+  <style>
+  h1 {
+    text-align: center;
+  }
+  .stVerticalBlock  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stForm {
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  button {
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+  }
+  </style>
+""", unsafe_allow_html=True)
+
+
 st.set_page_config(page_title="Text Summarizer", page_icon="✏️")
 
 st.title('Text Summarizer')
@@ -15,7 +36,7 @@ with st.form("form"):
   )
 
   option = st.selectbox(
-    "Choose an otion for the summary:",
+    "Choose an option for the summary:",
     ["Detailed", "Brief", "Bullet points"]
   )
 
