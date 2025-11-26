@@ -11,6 +11,7 @@ def summarize_text(text: str, option: str) -> str:
   Summarize the user's text following the rule below.
   If the rule is not "Bullet points" you have to summarize in paragraphs.
   Write just the summary, with no additional content.
+  If the text is too short to summarize, just output the same text back.
 
   Rule: {option} summary.
   """
